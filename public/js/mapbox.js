@@ -1,12 +1,11 @@
 /* eslint-disable */
 
 export const displayMap = (locations) => {
-  mapboxgl.accessToken =
-    'pk.eyJ1IjoicnV0aGxlc3NsaWZlIiwiYSI6ImNsdTJoaGRjMzB5YTcya24wZ2I5ZWNlZ2IifQ.hk9BAS-NXwwrKqw2cNFHkQ';
+  mapboxgl.accessToken = process.env.MAPBOX_ACCESS_TOKEN;
 
   var map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/ruthlesslife/clu2hucvc00y101p75d4t2fni',
+    style: process.env.MAPBOX_STYLE,
     scrollZoom: false,
     // center: [-118.113491, 34.111745],
     // zoom: 4,

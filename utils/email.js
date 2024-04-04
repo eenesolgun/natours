@@ -15,8 +15,7 @@ module.exports = class Email {
     if (process.env.NODE_ENV === 'production') {
       return nodemailer.createTransport(
         new Transport({
-          apiKey:
-            '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',
+          apiKey: process.env.EMAIL_API_KEY,
         }),
       );
     }

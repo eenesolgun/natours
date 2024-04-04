@@ -1,8 +1,6 @@
 /* eslint-disable */
 import axios from 'axios';
-const stripe = Stripe(
-  'pk_test_51P0ppBP45kVfHWMw1kN2RtSMUDRnKfbFRBVHqULiUrwjz7maN58tes080ogJFikhM3JGSTodUrOIhy0VRTeDlM3100mT7zfbTw',
-);
+const stripe = Stripe(process.env.STRIPE_TOKEN);
 
 export const bookTour = async (tourId) => {
   // 1) Get checkout session from API
